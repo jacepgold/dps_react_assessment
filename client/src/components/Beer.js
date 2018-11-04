@@ -6,7 +6,7 @@ import { Segment, Header, Grid, Divider, Card, Image, Icon } from 'semantic-ui-r
 class Beers extends React.Component {
   state = { beers: [], breweries: [] }
   
-  componentWillMount() {
+  componentDidMount() {
     axios.get('/api/all_beers')
     .then(res => {
       console.log("All Beers Success = " + res)
